@@ -46,6 +46,19 @@ width:400px;
 display:none;
 }
 
+.AustralianEmpty {
+height:100px;
+margin-left:20px;
+}
+
+.Australian {
+height:100px;
+width:100px;
+display:none;
+position:absolute;
+top:0px;
+}
+
 #ball {
 /*display:block;*/
 position:absolute;
