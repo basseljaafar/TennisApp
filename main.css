@@ -46,17 +46,51 @@ width:400px;
 display:none;
 }
 
-.AustralianEmpty {
+.AustralianEmpty, .RolandEmpty, .WimbledonEmpty, .USEmpty {
 height:100px;
+}
+
+.AustralianEmpty {
 margin-left:20px;
 }
 
-.Australian {
+.RolandEmpty {
+margin-left:5px;
+}
+
+.WimbledonEmpty {
+margin-left:25px;
+}
+
+.USEmpty {
+margin-left:32px;
+}
+
+.Australian, .Roland, .Wimbledon, .US {
 height:100px;
 width:100px;
-display:none;
+/*display:none;*/
 position:absolute;
+}
+
+.Australian {
 top:0px;
+display:none;
+}
+
+.Roland {
+top:100px;
+display:none;
+}
+
+.Wimbledon {
+top:200px;
+display:none;
+}
+
+.US {
+top:300px;
+display:none;
 }
 
 #ball {
