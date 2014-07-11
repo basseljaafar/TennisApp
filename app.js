@@ -87,6 +87,7 @@ $(this).animate({"background":"yellow"});
 });*/
 
 $(".bullet").on("click", function(){
+$(".bullet").removeClass("yellow");
 $(this).addClass("yellow");
 });
 
