@@ -3,8 +3,9 @@
 	width:400px;
 	margin:auto;
 	margin-top:100px;
-	/*outline: 1px solid black;*/
+	outline: 1px solid black;
 	position:relative;
+	cursor: pointer;
 	display:none;
 }
 
@@ -32,7 +33,7 @@
 .tournament {
 	float:left;
 	outline:1px solid blue;
-	opacity:0.4;
+	/*opacity:0.4;*/
 }
 
 .quest {
@@ -68,6 +69,7 @@ li {
 	font-size:130%;
 	font-family: Arial;
 	font-style:bold;
+	color:white;
 }
 
 .options {
@@ -162,6 +164,7 @@ display:none;
 height:90px;
 width:90px;
 margin:5px;
+opacity:0.4;
 }
 
 #ball {
@@ -183,4 +186,37 @@ display:none;
 text-align:center;
 font-family:Rockwell;
 display:none;
+}
+
+.bullet {
+height:1.3em;
+width:1.3em;
+position:absolute;
+border-radius:100%;
+border:1px solid white;
+margin-left:10px;
+z-index:1;
+cursor: pointer;
+}
+
+.uno {
+top:150px;
+}
+
+.dos {
+top:205px;
+}
+
+.tres {
+top:260px;
+
+}
+
+.quatro {
+top:315px;
+
+}
+
+.yellow {
+background:yellow;
 }

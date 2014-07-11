@@ -1,4 +1,14 @@
+var logos = [];
+logos[0] = ".AustralianLogo";
+logos[1] = ".RolandLogo";
+logos[2] = ".WimbledonLogo";
+logos[3] = ".USLogo";
 
+var bgs = [];
+bgs[0] = "Abg";
+bgs[1] = "Rbg";
+bgs[2] = "Wbg";
+bgs[3] = "Ubg";
 
 function Question(quest, one, two, three, four, correct){
 	this.quest = quest;
@@ -39,12 +49,12 @@ var Aquestion = new Question("Who did Roger Federer beat to win his first Grand 
  arr[3] = Dquestion;
  
  
-var a = Aquestion.quest;
+/*var a = Aquestion.quest;
 $("p.question").text(a);
 $(".one").text(Aquestion.one);
 $(".two").text(Aquestion.two);
 $(".three").text(Aquestion.three);
-$(".four").text(Aquestion.four);
+$(".four").text(Aquestion.four);*/
 
 
 $(document).ready(function(){
@@ -61,6 +71,40 @@ $("#nadal").delay(7700).fadeIn(50).delay(1000).fadeOut(50);
 $("#king").delay(8800).fadeIn(50).delay(1000).fadeOut(50);
 $("#ball").delay(9900).fadeIn(50);
 $("#quiz").delay(9900).fadeIn(50);
-$("#click").delay(10500).fadeIn(50)
+$("#click").delay(10500).fadeIn(50);
+
+$("#ball").on("click", function(){
+
+$(".start").hide();
+$("#click").hide();
+$(".main").show();
+});
+
+/*$("div").on("click",".bullet", function(){ //not working!! turn ball yellow
+
+alert("hello");
+$(this).animate({"background":"yellow"});
+});*/
+
+
+var i = 0;
+
+if(i==0){
+	$(".bg").addClass(bgs[i]);										//set background color
+	$(logos[0]).animate({"opacity":"1"});							//set logo opacity
+};
+
+var a = Aquestion.quest;
+$("p.question").text(arr[i].quest);
+$(".one").text(arr[i].one);
+$(".two").text(arr[i].two);
+$(".three").text(arr[i].three);
+$(".four").text(arr[i].four);
+
+
+
+
+
+
 
 });
