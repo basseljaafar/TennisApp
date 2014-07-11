@@ -86,6 +86,9 @@ alert("hello");
 $(this).animate({"background":"yellow"});
 });*/
 
+$(".bullet").on("click", function(){
+$(this).addClass("yellow");
+});
 
 var i = 0;
 
