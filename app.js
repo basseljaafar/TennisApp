@@ -10,6 +10,12 @@ bgs[1] = "Rbg";
 bgs[2] = "Wbg";
 bgs[3] = "Ubg";
 
+colors = [];
+colors[0]="#0033FF";
+colors[1]="#CC0000";
+colors[2]="#009900";
+colors[3]="#006699";
+
 function Question(quest, one, two, three, four, correct){
 	this.quest = quest;
 	this.one = one;
@@ -69,8 +75,8 @@ $("#sampras").delay(5500).fadeIn(50).delay(1000).fadeOut(50);
 $("#agassi").delay(6600).fadeIn(50).delay(1000).fadeOut(50);
 $("#nadal").delay(7700).fadeIn(50).delay(1000).fadeOut(50);
 $("#king").delay(8800).fadeIn(50).delay(1000).fadeOut(50);
-$("#ball").delay(9900).fadeIn(50);
-$("#quiz").delay(9900).fadeIn(50);
+$("#ball").delay(10000).fadeIn(50);
+$("#quiz").delay(10000).fadeIn(50);
 $("#click").delay(10500).fadeIn(50);
 
 $("#ball").on("click", function(){
@@ -89,6 +95,19 @@ $(this).animate({"background":"yellow"});
 $(".bullet").on("click", function(){
 $(".bullet").removeClass("yellow");
 $(this).addClass("yellow");
+});
+
+$("ul").on("click", "li", function(){
+$(".bullet").removeClass("yellow");
+if($(this).hasClass("one")){
+	$(".uno").addClass("yellow");
+} else if ($(this).hasClass("two")){
+			$(".dos").addClass("yellow");
+		} else if ($(this).hasClass("three")){
+				$(".tres").addClass("yellow");
+				} else if ($(this).hasClass("four")){
+							$(".quatro").addClass("yellow");
+						}
 });
 
 var i = 0;
