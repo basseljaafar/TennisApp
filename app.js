@@ -16,6 +16,12 @@ colors[1]="#CC0000";
 colors[2]="#009900";
 colors[3]="#006699";
 
+cups = [];
+cups[0] = ".Australian";
+cups[1] = ".Roland";
+cups[2] = ".Wimbledon";
+cups[3] = ".US";
+
 function Question(quest, one, two, three, four, correct){
 	this.quest = quest;
 	this.one = one;
@@ -34,7 +40,7 @@ var addTournament = function(i){
 	$(".four").text(arr[i].four);
 	$(".bg").addClass(bgs[i]);										//set background color
 	$(logos[i]).animate({"opacity":"1"});							//set logo opacity
-	
+	$(".bullet").removeClass("yellow");
 };
 
 var removeTournament = function(i){
@@ -132,6 +138,23 @@ addTournament(i);
 
 
 $(".submit").on("click", function(){
+	if($(".uno").hasClass("yellow") && arr[i].one == arr[i].correct){
+		
+			$(cups[i]).addClass("disp");
+		
+	} else if($(".dos").hasClass("yellow") && arr[i].two ==arr[i].correct){
+		
+			$(cups[i]).addClass("disp");
+			
+	} else if ($(".tres").hasClass("yellow") && arr[i].three == arr[i].correct){
+				
+			$(cups[i]).addClass("disp");
+				
+	} else if ($(".quatro").hasClass("yellow") && arr[i].four == arr[i].correct){
+				
+			$(cups[i]).addClass("disp");
+				
+			};
 	i++;
 	if(i!=4){
 		
