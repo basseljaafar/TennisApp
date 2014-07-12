@@ -33,6 +33,7 @@ function Question(quest, one, two, three, four, correct){
 
 var addTournament = function(i){
 	
+	
 	$("p.question").text(arr[i].quest);
 	$(".one").text(arr[i].one);
 	$(".two").text(arr[i].two);
@@ -41,7 +42,21 @@ var addTournament = function(i){
 	$(".bg").addClass(bgs[i]);										//set background color
 	$(logos[i]).animate({"opacity":"1"});							//set logo opacity
 	$(".bullet").removeClass("yellow");
+	
+	if (i == 0){
+	$("p.sub").addClass("Acolor");
+	} else if (i == 1){
+	$("p.sub").addClass("Bcolor");
+	} else if (i == 2){
+	$("p.sub").addClass("Ccolor");
+	} else if (i == 3){
+	$("p.sub").addClass("Dcolor");
+	}
+	
 };
+
+var count = 0;
+var i = 0;
 
 var removeTournament = function(i){
 	$(logos[i]).animate({"opacity":"0.4"});
@@ -132,7 +147,8 @@ if($(this).hasClass("one")){
 						}
 });
 
-var i = 0;
+
+
 addTournament(i);
 
 
@@ -141,49 +157,32 @@ $(".submit").on("click", function(){
 	if($(".uno").hasClass("yellow") && arr[i].one == arr[i].correct){
 		
 			$(cups[i]).addClass("disp");
+			count++;
 		
 	} else if($(".dos").hasClass("yellow") && arr[i].two ==arr[i].correct){
 		
 			$(cups[i]).addClass("disp");
+			count++;
 			
 	} else if ($(".tres").hasClass("yellow") && arr[i].three == arr[i].correct){
 				
 			$(cups[i]).addClass("disp");
+			count++;
 				
 	} else if ($(".quatro").hasClass("yellow") && arr[i].four == arr[i].correct){
 				
 			$(cups[i]).addClass("disp");
+			count++;
 				
 			};
 	i++;
-	if(i!=4){
+	if(i < 4){
 		
 		removeTournament(i-1);
 		addTournament(i);
 		
 	}
 });
-
-
-
-
-
-
-
-/*if(i==0){
-	$(".bg").addClass(bgs[i]);										//set background color
-	$(logos[0]).animate({"opacity":"1"});							//set logo opacity
-};
-
-
-$("p.question").text(arr[i].quest);
-$(".one").text(arr[i].one);
-$(".two").text(arr[i].two);
-$(".three").text(arr[i].three);
-$(".four").text(arr[i].four);*/
-
-
-
 
 
 

@@ -94,6 +94,22 @@ li {
 	background:#0033FF;
 }
 
+.Acolor {
+	color:#0033FF;
+}
+
+.Bcolor {
+	color:#CC0000;
+}
+
+.Ccolor {
+	color:#009900;
+}
+
+.Dcolor {
+	color:#006699;
+}
+
 .Rbg {
 	background:#CC0000;
 }
@@ -243,10 +259,13 @@ cursor:pointer;
 .sub {
 text-align:center;
 margin:0;
-color:#0033FF;
+/*color:#0033FF;*/
 margin-top:7px;
+font-size:130%;
+font-family: Arial;
 }
 
 .disp {
 display:block;
 }
+
