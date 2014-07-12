@@ -89,16 +89,16 @@ $(document).ready(function(){
 
 $(".start").show();
 $("#borg").fadeIn(50).delay(1000).fadeOut(50);
-$("#mcenroe").delay(1100).fadeIn(50).delay(1000).fadeOut(50);
-$("#connors").delay(2200).fadeIn(50).delay(1000).fadeOut(50);
-$("#becker").delay(3300).fadeIn(50).delay(1000).fadeOut(50);
-$("#edberg").delay(4400).fadeIn(50).delay(1000).fadeOut(50);
-$("#sampras").delay(5500).fadeIn(50).delay(1000).fadeOut(50);
-$("#agassi").delay(6600).fadeIn(50).delay(1000).fadeOut(50);
-$("#nadal").delay(7700).fadeIn(50).delay(1000).fadeOut(50);
-$("#king").delay(8800).fadeIn(50).delay(1000).fadeOut(50);
-$("#ball").delay(10000).fadeIn(50);
-$("#quiz").delay(10000).fadeIn(50);
+$("#mcenroe").delay(1110).fadeIn(50).delay(1000).fadeOut(50);
+$("#connors").delay(2220).fadeIn(50).delay(1000).fadeOut(50);
+$("#becker").delay(3330).fadeIn(50).delay(1000).fadeOut(50);
+$("#edberg").delay(4440).fadeIn(50).delay(1000).fadeOut(50);
+$("#sampras").delay(5550).fadeIn(50).delay(1000).fadeOut(50);
+$("#agassi").delay(6660).fadeIn(50).delay(1000).fadeOut(50);
+$("#nadal").delay(7770).fadeIn(50).delay(1000).fadeOut(50);
+$("#king").delay(8880).fadeIn(50).delay(1000).fadeOut(50);
+$("#ball").delay(10090).fadeIn(50);
+$("#quiz").delay(10100).fadeIn(50);
 $("#click").delay(10500).fadeIn(50);
 
 $("#ball").on("click", function(){
