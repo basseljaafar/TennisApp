@@ -25,6 +25,22 @@ function Question(quest, one, two, three, four, correct){
 	this.correct = correct;
 }
 
+var addTournament = function(i){
+	
+	$("p.question").text(arr[i].quest);
+	$(".one").text(arr[i].one);
+	$(".two").text(arr[i].two);
+	$(".three").text(arr[i].three);
+	$(".four").text(arr[i].four);
+	$(".bg").addClass(bgs[i]);										//set background color
+	$(logos[i]).animate({"opacity":"1"});							//set logo opacity
+	
+};
+
+var removeTournament = function(i){
+	$(logos[i]).animate({"opacity":"0.4"});
+};
+
 var Aquestion = new Question("Who did Roger Federer beat to win his first Grand Slam?","Marc Philipousis","David Ferrer","Andre Agassi","Juan Carlos Ferrero","Marc Philipousis");
  
  var Bquestion = new Question("Who of these players was the youngest to hold the number 1 ranking?",
@@ -111,18 +127,37 @@ if($(this).hasClass("one")){
 });
 
 var i = 0;
+addTournament(i);
 
-if(i==0){
+
+
+$(".submit").on("click", function(){
+	i++;
+	if(i!=4){
+		
+		removeTournament(i-1);
+		addTournament(i);
+		
+	}
+});
+
+
+
+
+
+
+
+/*if(i==0){
 	$(".bg").addClass(bgs[i]);										//set background color
 	$(logos[0]).animate({"opacity":"1"});							//set logo opacity
 };
 
-var a = Aquestion.quest;
+
 $("p.question").text(arr[i].quest);
 $(".one").text(arr[i].one);
 $(".two").text(arr[i].two);
 $(".three").text(arr[i].three);
-$(".four").text(arr[i].four);
+$(".four").text(arr[i].four);*/
 
 
 
