@@ -20,6 +20,16 @@
 	display:none;
 }
 
+.maintwo {
+	height:400px;
+	width:800px;
+	
+	position:absolute;
+	background:white;
+	z-index:10;
+	display:none;
+}
+
 .tournament, .trophies{
 	
 	width:100px;
@@ -269,3 +279,18 @@ font-family: Arial;
 display:block;
 }
 
+.result {
+height:150px;
+width:400px;
+border:5px solid black;
+background:yellow;
+margin:auto;
+margin-top:100px;
+border-radius:20px;
+}
+
+.res {
+height:1.3em;
+font-family:arial;
+
+}
