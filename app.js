@@ -49,7 +49,7 @@ var addTournament = function(i){
 	for(var a = 0; a < 4; a++){
 		$(".bg").removeClass(bgs[a]);
 		$("p.sub").removeClass(col[a]);
-	};
+	}
 	
 	$(".bg").addClass(bgs[i]);										//set background color
 	$(logos[i]).animate({"opacity":"1"});							//set logo opacity
@@ -63,7 +63,7 @@ var addTournament = function(i){
 	$("p.sub").addClass("Ccolor");
 	} else if (i == 3){
 	$("p.sub").addClass("Dcolor");
-	}
+	};
 	
 };
 
@@ -199,25 +199,24 @@ $(".submit").on("click", function(){
 	
 		$("p.res").text("You won " + count + " out of 4 Grand Slams");
 	};
+	});
 	
 	$(".pa").on("click", function(){
 	i = 0;
 	count = 0;
 	$(".maintwo").hide();
-	addTournament(i);
 	
-	for(var a = 0; a <= 3; a++ ){
+	
+	for (var a = 0; a <= 3; a++ ){
 	$(cups[a]).removeClass("disp");
-	if(a != 0){
+	//if(a != 0){
 		$(logos[a]).animate({"opacity":"0.4"});
-	};
-	};
-	
+	//};
+	}
+	removeTournament(3);
+	addTournament(i);
 	});
 	
 });
 
 
-
-
-});
