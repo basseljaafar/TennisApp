@@ -22,6 +22,12 @@ cups[1] = ".Roland";
 cups[2] = ".Wimbledon";
 cups[3] = ".US";
 
+col = [];
+col[0] = "Acolor";
+col[1] = "Bcolor";
+col[2] = "Ccolor";
+col[3] = "Dcolor";
+
 function Question(quest, one, two, three, four, correct){
 	this.quest = quest;
 	this.one = one;
@@ -39,6 +45,12 @@ var addTournament = function(i){
 	$(".two").text(arr[i].two);
 	$(".three").text(arr[i].three);
 	$(".four").text(arr[i].four);
+	
+	for(var a = 0; a < 4; a++){
+		$(".bg").removeClass(bgs[a]);
+		$("p.sub").removeClass(col[a]);
+	};
+	
 	$(".bg").addClass(bgs[i]);										//set background color
 	$(logos[i]).animate({"opacity":"1"});							//set logo opacity
 	$(".bullet").removeClass("yellow");
@@ -184,6 +196,7 @@ $(".submit").on("click", function(){
 	} else if (i == 4){
 		
 		$(".maintwo").show();
+	
 		$("p.res").text("You won " + count + " out of 4 Grand Slams");
 	};
 	
@@ -194,7 +207,7 @@ $(".submit").on("click", function(){
 	addTournament(i);
 	
 	for(var a = 0; a <= 3; a++ ){
-	$(cups[a]).hide();
+	$(cups[a]).removeClass("disp");
 	if(a != 0){
 		$(logos[a]).animate({"opacity":"0.4"});
 	};
