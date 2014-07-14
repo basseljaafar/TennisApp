@@ -21,9 +21,9 @@
 }
 
 .maintwo {
-	height:400px;
+	height:404px;
 	width:702px;
-	
+	top:-2px;
 	position:absolute;
 	background:white;
 	z-index:10;
