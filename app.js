@@ -181,7 +181,27 @@ $(".submit").on("click", function(){
 		removeTournament(i-1);
 		addTournament(i);
 		
-	}
+	} else if (i == 4){
+		
+		$(".maintwo").show();
+		$("p.res").text("You won " + count + " out of 4 Grand Slams");
+	};
+	
+	$(".pa").on("click", function(){
+	i = 0;
+	count = 0;
+	$(".maintwo").hide();
+	addTournament(i);
+	
+	for(var a = 0; a <= 3; a++ ){
+	$(cups[a]).hide();
+	if(a != 0){
+		$(logos[a]).animate({"opacity":"0.4"});
+	};
+	};
+	
+	});
+	
 });
 
 
